@@ -26,5 +26,4 @@ export default function decorate() {
   }
   section.appendChild(wrapper);
   main.appendChild(section);
-  
 }
