@@ -1,6 +1,6 @@
 import { div } from '../../scripts/dom-builder.js';
 
-export default function decorate(block) {
+export default function decorate() {
   const main = document.querySelector('main');
   const section = div({ class: 'section alternating-wrapper' });
   const wrapper = document.querySelector('.alternating');
@@ -26,5 +26,5 @@ export default function decorate(block) {
   }
   section.appendChild(wrapper);
   main.appendChild(section);
-  block.appendChild(main);
+  
 }
