@@ -1,4 +1,5 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
+import { createOptimizedPicture, getMetadata, readBlockConfig } from '../../scripts/aem.js';
+import { button, p, div, a } from '../../scripts/dom-builder.js';
 
 export default function decorate(block) {
   /* change to ul, li */

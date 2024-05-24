@@ -1,0 +1,25 @@
+/* Default template css */
+.default-content-wrapper {
+    text-align: left!important;
+}
+
+.default-content-wrapper h2:first-child {
+    margin-top: 0px!important;
+}
+
+.outer {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#main {
+    float: none;
+}
+
+@media (max-width: 860px) {
+    .outer {
+        flex-direction: column;
+    }
+}
