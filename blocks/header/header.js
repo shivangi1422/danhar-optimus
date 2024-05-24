@@ -40,7 +40,8 @@ function sortFlyoutMenus(menuPath) {
 
 function buildLogosBlock(headerBlock) {
   const logoHtmlBlock = headerBlock.children[0];
-  logoHtmlBlock.className = 'bg-danahergray-150 hidden lg:block';
+  console.log(logoHtmlBlock);
+  logoHtmlBlock.classList.add('bg-danahergray-150 hidden lg:block');
   const logoUl = logoHtmlBlock.querySelector('ul');
   logoUl.className = 'h-14 flex justify-center';
   const logoLis = logoUl.querySelectorAll(':scope > li');

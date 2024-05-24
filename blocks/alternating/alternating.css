@@ -6,10 +6,6 @@
   margin-bottom: 2rem
 }
 
-.alternating-wrapper :is(.block) {
-  display: block
-}
-
 .alternating-wrapper :is(.w-16) {
   width: 4rem
 }
