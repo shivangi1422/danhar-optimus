@@ -1,5 +1,5 @@
 import { getMetadata } from '../../scripts/aem.js';
-import { div, h1, h2 } from '../../scripts/dom-builder.js';
+import { div, h1 } from '../../scripts/dom-builder.js';
 
 function setSidebarMaxHeight() {
   let height = 0;
@@ -38,18 +38,18 @@ export default function buildAutoBlocks(block) {
   sidebar.id = 'sidebar';
 
   const title = getMetadata('og:title');
-  console.log(title);
   const description = getMetadata('og:description');
-  console.log(description);
 
-  const headTitle = div({class: 'header-section'},
+  const headTitle = div(
+    { class: 'header-section' },
     div(
       { class: 'head-section' },
       h1({ class: 'title' }, title),
-      div({class:'border'}),
+      div({ class: 'border' }),
       div({ class: 'description' }, description),
-    ));
-  
+    ),
+  );
+
   content.append(headTitle);
 
   // Iterate over each section
@@ -57,7 +57,6 @@ export default function buildAutoBlocks(block) {
     // Handling sidebars within each section
     const sidebars = blocks.querySelectorAll('[data-block-name^="sticky-right-navigation"]');
     if (sidebars.length > 0) {
-      console.log(sidebar.length);
       sidebars.forEach((sidebarItem) => {
         sidebar.appendChild(sidebarItem); // Clone to keep the original in place
       });

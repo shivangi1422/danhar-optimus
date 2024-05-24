@@ -1,5 +1,4 @@
 export default function decorate(block) {
-  console.log('venkatesh');
   // console.log(block);
   [...block.children].forEach((row) => {
     // row.classList.add("head-title");

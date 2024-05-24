@@ -21,14 +21,17 @@ export default async function buildAutoBlocks(block) {
   const content = document.createElement('div');
   content.id = 'content';
 
-  // Creating outer element
-  const outerElement = document.createElement('div');
-  outerElement.className = 'outer';
+   // Creating outer element
+   const outerElement = document.createElement('div');
+   outerElement.className = 'outer';
 
   // Creating main and sidebar elements
   const main = document.createElement('div');
   main.id = 'main';
-
-  const sidebar = document.createElement('div');
-  sidebar.id = 'sidebar';
+ 
+  outerElement.appendChild(headTitle);
+  outerElement.appendChild(main);
+  content.appendChild(outerElement);
+  contentBlocks.appendChild(content);
+  block.appendChild(contentBlocks);
 }
