@@ -26,4 +26,5 @@ export default function decorate(block) {
   }
   section.appendChild(wrapper);
   main.appendChild(section);
+  block.appendChild(main);
 }
